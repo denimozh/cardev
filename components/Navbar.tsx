@@ -10,7 +10,9 @@ const Navbar = () => {
             <Link href="/" className='flex justify-center items-center'>
                 <p className='font-bold text-2xl'>Car<span className='text-primary-red font-semibold'>Dev</span></p>
             </Link>
-            <Button title="Sign In" btnType="button" containerStyles='text-primary-red rounded-full bg-white min-w-[130px]'/>
+            <span className='relative flex'>
+                <Button title="Sign In" btnType="button" containerStyles='hover:bg-slate-100 active:bg-slate-200 text-primary-red rounded-lg bg-white min-w-[130px] text-xl transition-transform hover:translate-y-2'/>
+            </span>
         </nav>
     </header>
   )
