@@ -1,12 +1,15 @@
 import { CarCard, Filter, Hero, SearchBar } from '@/components'
+import { fuels, yearsOfProduction } from '@/constants';
 import { fetchCars } from '@/utils';
 import Image from 'next/image'
 
-export default async function Home() {
-  const allCars = await fetchCars();
+export default async function Home({ searchParams }) {
+  const allCars = await fetchCars({ manufacturer: searchParams.manufacturer || " ", year: searchParams.year || 2022, fuel: searchParams.fuel || " ",
+                                  limit: searchParams.limit || 10, model: searchParams.model || " "});
 
   const isDataEmpty = !Array.isArray(allCars) || allCars.length <1 || !allCars;
-  console.log(allCars);
+  
+
   return (
     <main className="overflow-hidden">
       <Hero />
@@ -19,8 +22,8 @@ export default async function Home() {
         <div className='mt-12 w-full flex-between items-center flex-wrap gap-5'>
           <SearchBar />
           <div className='flex justify-start flex-wrap items-center gap-2'>
-              <Filter title="fuel"/>
-              <Filter title="year"/>
+              <Filter title="fuel" options={fuels}/>
+              <Filter title="year" options={yearsOfProduction}/>
           </div>
         </div>
 
