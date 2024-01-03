@@ -22,7 +22,7 @@ const SearchManufacturer = ({ manufacturer, setManufacturer} : SearchManufacture
                 placeholder='Volkswagen'
                 displayValue={(manufacturer: string) => manufacturer} onChange={(e) => setQuery(e.target.value)}/>
                 <Transition as={Fragment} leave='transition ease-in duration-100' leaveFrom='opacity-100' leaveTo='opacity-0' afterLeave={() => setQuery('')}>
-                    <Combobox.Options>
+                    <Combobox.Options className="bg-textWhite">
                         {filteredManufacturers.length === 0 && query !== "" ? (
                             <Combobox.Option
                                 value={query}
