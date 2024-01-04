@@ -97,3 +97,19 @@ export const manufacturers = [
       ],
     },
   ];
+
+  export const Places = [
+    {city: "Select Pick-up Location"},
+    {city: "London"},
+    {city: "Manchester"},
+    {city: "Cambridge"},
+    {city: "Oxford"},
+  ]
+
+  export const DropOff = [
+    {city: "Select Pick-up Location"},
+    {city: "London"},
+    {city: "Manchester"},
+    {city: "Cambridge"},
+    {city: "Oxford"},
+  ]

@@ -1,4 +1,4 @@
-import { CarCard, Filter, Hero, SearchBar } from '@/components'
+import { BookARide, CarCard, Filter, Hero, SearchBar } from '@/components'
 import { fuels, yearsOfProduction } from '@/constants';
 import { fetchCars } from '@/utils';
 import Image from 'next/image'
@@ -13,7 +13,7 @@ export default async function Home({ searchParams }) {
   return (
     <main className="overflow-hidden">
       <Hero />
-      <div className='mt-12 padding-x padding-y max-width' id='discover'>
+      <div className='mt-20 padding-x padding-y max-width' id='discover'>
         <div className='flex flex-col items-start justify-start gap-y-2.5 text-black-100;'>
           <p className='text-5xl font-extrabold text-textWhite'>Car Catalogue</p>
           <p className='font-medium text-lg pt-2 text-textWhite'>View the cars which we have in stock</p>
@@ -39,7 +39,9 @@ export default async function Home({ searchParams }) {
             <p>{allCars?.message}</p>
           </div>
         )}
-        
+        <div className='mt-40'>
+          <BookARide />
+        </div>
       </div>
     </main>
   )
