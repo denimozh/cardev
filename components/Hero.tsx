@@ -5,7 +5,19 @@ import { Button } from "."
 
 const Hero = () => {
   const handleScroll = () => {
+    const nextSection = document.getElementById("discover");
 
+    if (nextSection) {
+      nextSection.scrollIntoView({ behavior: "smooth" });
+    }
+  }
+
+  const handleScrollRide = () => {
+    const nextSection = document.getElementById("book");
+
+    if (nextSection) {
+      nextSection.scrollIntoView({ behavior: "smooth" });
+    }
   }
   return (
     <div className="flex xl:flex-row flex-col gap-5 relative z-0 max-w-[1440px] mx-auto">
@@ -14,7 +26,7 @@ const Hero = () => {
             <p className="text-[27px] text-textWhite font-light mt-10">Streamline your car rental experince with out effortless booking process.</p>
             <div className="flex gap-14">
               <Button title="Explore Cars" containerStyles="bg-primary-red text-white rounded-lg text-2xl mt-14 shadow-xl hover:bg-red-600 transition-transform hover:-translate-y-2 active:bg-red-700 hover:shadow-primary-red/50 " handleClick={handleScroll}/>
-              <Button title="Book A Ride" containerStyles="bg-textWhite text-black rounded-lg text-2xl mt-14 shadow-xl hover:bg-red-100 transition-transform hover:-translate-y-2 active:bg-red-200 hover:shadow-primary-red/50 " handleClick={handleScroll}/>
+              <Button title="Book A Ride" containerStyles="bg-textWhite text-black rounded-lg text-2xl mt-14 shadow-xl hover:bg-red-100 transition-transform hover:-translate-y-2 active:bg-red-200 hover:shadow-primary-red/50 " handleClick={handleScrollRide}/>
             </div>
         </div>
         <div className="xl:flex-[1.5] flex justify-end items-end w-full xl:h-screen">

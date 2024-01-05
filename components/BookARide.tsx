@@ -70,7 +70,7 @@ const BookARide = () => {
   }
 
   return (
-    <div className='mt-12 padding-x padding-y max-width bg-textWhite rounded-2xl'>
+    <div className='mt-14 mb-32 padding-x padding-y max-width bg-textWhite rounded-2xl'>
         <p className='mt-4 text-3xl font-bold text-footer pb-2'>Book a Car</p>
         {hasFilled ? 
           <Transition appear show={isOpen} as={Fragment}>
@@ -98,23 +98,23 @@ const BookARide = () => {
                     leaveFrom="opacity-100 scale-100"
                     leaveTo="opacity-0 scale-95"
                   >
-                    <Dialog.Panel className="w-full max-w-3xl max-h-[90vh] transform overflow-hidden rounded-2xl bg-white text-left align-middle shadow-xl transition-all">
+                    <Dialog.Panel className="w-full max-w-3xl max-h-[500px] transform overflow-hidden rounded-2xl bg-white text-left align-middle shadow-xl transition-all">
                       <div>
                         <Dialog.Title
                           as="h3"
-                          className="text-lg font-bold leading-6 text-textWhite text-left bg-primary-red pt-3 pl-3"
+                          className="text-lg font-bold leading-6 text-textWhite text-left bg-primary-red pt-3 pl-3 pb-4"
                         >
-                          COMPLETE RESERVATION
+                          RESERVATION COMPLETED
                         </Dialog.Title>
                         <div className=" bg-red-200">
                           <p className="text-medium text-gray-400 p-3">
-                            <span className='text-red-400'>Upon completing this reservation enquiry, you will receive:</span>
+                            <span className='text-red-400 pb-2'>Upon completing this reservation enquiry, you will receive:</span>
                             <p>Your rental voucher to produce on arrival at the rental desk and a toll-free customer support number.</p>
                           </p>
                         </div>
                         <div className='grid 2xl:grid-cols-2 xl:grid-cols-2 md:grid-cols-2 grid-cols-1 p-4'>
                           <div className=''>
-                            <p className='text-orange-500'>Location & Date</p>
+                            <p className='text-red-500 font-medium pb-2'>Location & Date</p>
                             <div className='flex'>
                               <LocationOnIcon />
                               <div>
@@ -129,11 +129,15 @@ const BookARide = () => {
                                 <p>{dateDropOf}</p>
                               </div>
                             </div>
+                            <p className='pl-2 pt-5 '>Car - <span className='text-red-600'>{manufacturer}</span></p>
+                            <p className='pl-2 pt-4 font font-medium'>Code ID: <span className='text-red-200 font-base'>submit this to the front desk</span></p>
+                            <p className='pl-2 pt-1 font font-bold text-primary-red'>HIv0324</p>
                           </div>
-                        </div>
-                        <div className=''>
-                          <p className='pl-5'>Car - <span className='text-orange-600'>{manufacturer}</span></p>
-                          <Image src='https://cdn.imagin.studio/getimage' alt='car model' fill priority className='object-contain scale-100 pl-52'/>
+                          <div className='flex flex-col gap-5'>
+                            <div className='pt-20'>
+                              <Image src='https://cdn.imagin.studio/getimage' alt='car model' fill priority className='object-contain scale-100 pl-52'/>
+                            </div>
+                          </div>
                         </div>
                       </div>
     

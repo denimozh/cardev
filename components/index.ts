@@ -8,6 +8,7 @@ import SearchManufacturer from './SearchManufacturer'
 import CarCard from './CarCard'
 import CarDetails from './CarDetails'
 import BookARide from './BookARide'
+import Information from './Information'
 
 export{
     Hero,
@@ -19,5 +20,6 @@ export{
     SearchManufacturer,
     CarCard,
     CarDetails,
-    BookARide
+    BookARide,
+    Information
 }
